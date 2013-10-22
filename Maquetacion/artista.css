@@ -34,6 +34,10 @@ header #nav_cabecera ul li a:hover{
 	color: red;
 }
 
+#banner{
+	text-align: center;
+}
+
 #menu{
 	position: relative;
 	padding: 7em 0;
@@ -95,20 +99,12 @@ header #nav_cabecera ul li a:hover{
 
 .contenido .contenido_item{
 	display: inline-block;
-	vertical-align: middle;
-
+	vertical-align: top;
 	text-align: left;
-	margin: 0 1%;
-	width: 44%;
+	margin: 2em auto;
+	width: 80%;
 }
 
 .contenido .contenido_item h1{
 	color: #553a1d;
-}
-
-.contenido .contenido_item figure img{
-	height: 100%;
-	max-width: 462px;
-	max-height: 373px;
-	width: 100%;
 }
