@@ -1,0 +1,121 @@
+body{
+	background: none;
+	color: #837f73;
+	font-family: "Helvetica", Arial;
+	font-size: 16px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+header #nav_cabecera ul{
+	list-style: none;
+	text-align: right;
+	margin: 0;
+}
+
+header #nav_cabecera ul li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0.5em 0.5em 0 0;
+
+}
+
+header #nav_cabecera ul li a{
+	color: #553a1d;
+	display: block;
+	text-decoration: none;
+	padding: 0.5em 0.5em;
+}
+
+header #nav_cabecera ul li a:hover{
+	color: red;
+}
+
+#menu{
+	position: relative;
+	padding: 7em 0;
+}
+
+#menu figure{
+	position: absolute;
+	top: -20px;
+	margin: 0 5em;
+}
+
+#menu figure img{
+	width: 183px;
+}
+
+#menu figure, #menu #nav_menu, #menu #nav_menu ul li {
+	display: inline-block;
+	vertical-align: top;
+}	
+
+#menu #nav_menu{
+	margin: 0 0 0 20em;
+}
+
+#menu #nav_menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu #nav_menu ul li a{
+	color: #553a1d;
+	display: block;
+	text-decoration: none;
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+#menu #nav_menu ul li a:hover{
+	color: red;
+}
+
+#pie{
+	color: #553a1d;
+	padding: 1em;
+	text-align: center;
+}
+
+#wrapper{
+	background: #fbead0;
+	border-radius: 2.5px;
+	width: 76%;
+	margin: 0 auto;
+}
+
+.contenido {
+	padding: 2em 1.5em 1em 1.5em;
+	text-align: center;
+}
+
+.contenido .contenido_item{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	margin: 0 1%;
+	width: 44%;
+}
+
+.contenido .contenido_item h1{
+	color: #553a1d;
+}
+
+.contenido .contenido_item p label{
+	display: block;
+	text-align: right;
+	width: 100px;
+}
+
+.contenido .contenido_item p input{
+	display: block;
+}
+
+.contenido .contenido_item p input, .contenido .contenido_item p label{
+	display: inline-block;
+	vertical-align: top;
+}
