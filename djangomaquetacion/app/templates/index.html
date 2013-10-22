@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+{% block css %}
+	<link rel="stylesheet" href="/static/css/master.css">
+	<link rel="stylesheet" href="/static/css/responsiveslides.css">
+	<link rel="stylesheet" href="/static/css/demo.css">
+{% endblock %}
+{% block js %}
+	<script src="/static/js/responsiveslides.min.js"></script>
+	<script src="/static/js/master.js"></script>
+{% endblock %}
+{% block content %}
+<div>
+	<div class="callbacks_container">
+      	<ul class="rslides" id="slider4">
+	        <li>
+	          <img src="{{ MEDIA_URL }}app/guitarra4.png" alt="">
+	          <p class="caption">This is a caption</p>
+	        </li>
+	        <li>
+	          <img src="{{ MEDIA_URL }}app/Koala_1.jpg" alt="">
+	          <p class="caption">This is another caption</p>
+	        </li>
+        	<li>
+          		<img src="{{ MEDIA_URL }}app/djangopony.png" alt="">
+          		<p class="caption">The third caption</p>
+        	</li>
+      	</ul>
+    </div>
+</div>
+{% for articulo_item in articulo %}
+	<section class="contenido">
+		<article class="contenido_item">
+			<h1>{{ articulo_item.Titulo }}</h1>
+			<hr/>
+			<p>{{ articulo_item.Descripcion }}</p>
+		</article>
+		<article class = "contenido_item_pen">
+		{% for comentario_item in comentario %}
+			{% if comentario_item.Articulo_id == articulo_item.id %}
+				<div class = "contenido_item_pen_">
+					<figure>
+					</figure>
+					<p class="contenido_item_pen_descrip">
+						<i>{{ comentario_item.Descripcion }}</i>
+					</p>
+					<p class="contenido_item_pen_autor">
+						{{ comentario_item.Autor }}
+					</p>
+				</div>
+			{% endif %}
+		{% endfor %}
+		</article>
+	</section>
+{% endfor %}
+<section id="contend">
+{% for exposicion_item in exposicion %}
+	<article class="contend_item">
+		<figure class="contend_item_imagen">
+			<img src="{{ MEDIA_URL }}{{ exposicion_item.Imagen }}">
+		</figure>
+		<h2 class="contend_item_titulo">{{ exposicion_item.Titulo }}</h2>
+		<hr/>
+		<p class="contend_item_descripcion">
+			{{ exposicion_item.Descripcion }}
+		</p>
+	</article>
+{% endfor %}
+</section>
+{% endblock %}

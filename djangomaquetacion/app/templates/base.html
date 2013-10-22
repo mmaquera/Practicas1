@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>
+		{% block title %}Llanco{% endblock %}
+	</title>
+	<link rel="stylesheet" href="/static/css/normalize.css">
+	{% block css %}{% endblock %}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	{% block js %}{% endblock %}
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav id="nav_cabecera">
+				<ul>
+					<li><a href='#'>Español</a></li>
+					<li><a href='#'>Ingles</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="menu">
+			<figure>
+				<img src="{{ MEDIA_URL }}app/logo.png">
+			</figure>
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="{% url "home" %}">Inicio</a></li>
+					<li><a href="{% url "nosotros" 2 %}">Nosotros</a></li>
+					<li><a href="{% url "home" %}">Galería</a></li>
+					<li><a href="{% url "home" %}">El Taller</a></li>
+					<li><a href="{% url "home" %}">El Artista</a></li>
+					<li><a href="{% url "home" %}">Contacto</a></li>
+					<!-- {% for menu_list in menu %}
+						{% if menu_list.Menu_id == 1 %}
+							<li><a href="{% url "home" %}">{{ menu_list.Descripcion }}</a></li>
+						{% else %}
+							<li><a href="{% url "nosotros" menu_list.pk %}">{{ menu_list.Descripcion }}</a></li>
+						{% endif %}
+					{% endfor %} -->
+				</ul>
+			</nav>
+		</div>
+		{% block content %}{% endblock %}
+		<footer id="pie">
+			<p><strong>Luthier Italo Llanco 2013</strong></p>
+			<p>Huancayo - Perú</p>
+		</footer>
+	</div>
+</body>
+</html>

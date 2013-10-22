@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Llanco</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="master.css">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="responsiveslides.css">
+	<link rel="stylesheet" href="demo.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+
+	<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          //$('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          //$('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav id="nav_cabecera">
+				<ul>
+					<li><a href='#'>Español</a></li>
+					<li><a href='#'>Ingles</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="menu">
+			<figure>
+				<img src="imgs/logo.png">
+			</figure>
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="nosotros.html">Nosotros</a></li>
+					<li><a href="galeria.html">Galeria</a></li>
+					<li><a href="taller.html">El Taller</a></li>
+					<li><a href="artista.html">El Artista</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<div class="callbacks_container">
+		      	<ul class="rslides" id="slider4">
+			        <li>
+			          <img src="imgs/guitarra1.png" alt="">
+			          <p class="caption">This is a caption</p>
+			        </li>
+			        <li>
+			          <img src="imgs/guitarra2.png" alt="">
+			          <p class="caption">This is another caption</p>
+			        </li>
+		        	<li>
+		          		<img src="imgs/guitarra3.png" alt="">
+		          		<p class="caption">The third caption</p>
+		        	</li>
+		      	</ul>
+		    </div>
+		</div>
+		<section class="contenido">
+			<article class="contenido_item">
+				<h1>Lorem Ipsum</h1>
+				<hr/>
+				<p>
+					Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+
+					No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+				</p>
+			</article>
+			<article class = "contenido_item_pen">
+				<div class = "contenido_item_pen_">
+					<figure>
+					</figure>
+					<p class="contenido_item_pen_descrip">
+						<i>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera.</i>
+					</p>
+					<p class="contenido_item_pen_autor">
+						Lorem Ipsum
+					</p>
+				</div>
+				<div class = "contenido_item_pen_">
+					<figure>
+					</figure>
+					<p class="contenido_item_pen_descrip">
+						<i>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera.</i>
+					</p>
+					<p class="contenido_item_pen_autor">
+						Lorem Ipsum
+					</p>
+				</div>
+				<div class = "contenido_item_pen_">
+					<figure>
+					</figure>
+					<p class="contenido_item_pen_descrip">
+						<i>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera.</i>
+					</p>
+					<p class="contenido_item_pen_autor">
+						Lorem Ipsum
+					</p>
+				</div>
+				<div class = "contenido_item_pen_">
+					<figure>
+					</figure>
+					<p class="contenido_item_pen_descrip">
+						<i>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera.</i>
+					</p>
+					<p class="contenido_item_pen_autor">
+						Lorem Ipsum
+					</p>
+				</div>
+			</article>
+		</section>
+		<section id="contend">
+			<article class="contend_item">
+				<figure class="contend_item_imagen">
+					<img src="imgs/guitarra3.png">
+				</figure>
+				<h2 class="contend_item_titulo">Lorem Ipsum</h2>
+				<hr/>
+				<p class="contend_item_descripcion">
+					El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados.
+				</p>
+			</article>
+			<article class="contend_item">
+				<figure class="contend_item_imagen">
+					<img src="imgs/guitarra1.png">
+				</figure>
+				<h2 class="contend_item_titulo">Lorem Ipsum</h2>
+				<hr/>
+				<p class="contend_item_descripcion">
+					El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados.
+				</p>
+			</article>
+			<article class="contend_item">
+				<figure class="contend_item_imagen">
+					<img src="imgs/guitarra2.png">
+				</figure>
+				<h2 class="contend_item_titulo">Lorem Ipsum</h2>
+				<hr/>
+				<p class="contend_item_descripcion">
+					El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados.
+				</p>
+			</article>
+			<article class="contend_item">
+				<figure class="contend_item_imagen">
+					<img src="imgs/guitarra2.png">
+				</figure>
+				<h2 class="contend_item_titulo">Lorem Ipsum</h2>
+				<hr/>
+				<p class="contend_item_descripcion">
+					El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados.
+				</p>
+			</article>
+		</section>
+		<footer id="pie">
+			<p><strong>Luthier Italo Llanco 2013</strong></p>
+			<p>Huancayo - Perú</p>
+		</footer>
+	</div>
+</body>
+</html>

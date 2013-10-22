@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Nosotros - Llanco{% endblock %}
+{% block css %}
+	<link rel="stylesheet" href="/static/css/nosotros.css">
+
+	<link rel="stylesheet" href="/static/css/responsiveslides.css">
+	<link rel="stylesheet" href="/static/css/demo.css">
+{% endblock %}
+{% block js %}
+	<script src="/static/js/responsiveslides.min.js"></script>
+	<script src="/static/js/master.js"></script>
+{% endblock %}
+{% block content %}
+<div>
+	<div class="callbacks_container">
+      	<ul class="rslides" id="slider4">
+	        <li>
+	          <img src="{{ MEDIA_URL }}app/guitarra4.png" alt="">
+	          <p class="caption">This is a caption</p>
+	        </li>
+	        <li>
+	          <img src="{{ MEDIA_URL }}app/Koala_1.jpg" alt="">
+	          <p class="caption">This is another caption</p>
+	        </li>
+        	<li>
+          		<img src="{{ MEDIA_URL }}app/djangopony.png" alt="">
+          		<p class="caption">The third caption</p>
+        	</li>
+      	</ul>
+    </div>
+</div>
+<section class="contenido">
+	{% if articulo %}
+		{% for articulo_item in articulo %}
+			<article class="contenido_item">
+				<h1>{{ articulo_item.Titulo }}</h1>
+				<hr/>
+				<p>
+					{{ articulo_item.Descripcion }}
+				</p>
+			</article>
+		{% endfor %}
+	{% else %}
+		<h1>No hay texto disponible</h1>
+	{% endif %}
+</section>
+{% endblock %}
+</body>
+</html>
