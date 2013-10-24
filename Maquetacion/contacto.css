@@ -5,11 +5,6 @@ body{
 	font-size: 16px;
 }
 
-h1 {
-	margin: 0;
-	padding: 0;
-}
-
 header #nav_cabecera ul{
 	list-style: none;
 	text-align: right;
@@ -77,7 +72,7 @@ header #nav_cabecera ul li a:hover{
 
 #pie{
 	color: #553a1d;
-	padding: 1em;
+	padding: 2em 0 1em 0;
 	text-align: center;
 }
 
@@ -93,12 +88,36 @@ header #nav_cabecera ul li a:hover{
 	text-align: center;
 }
 
-.contenido .contenido_item{
+.contenido .contenido_item, .contenido .contenido_item_datos{
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
 	margin: 0 1%;
 	width: 44%;
+}
+
+.contenido .contenido_item h1{
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.contenido .contenido_item_datos{
+	background: #8a8272;
+	color: white;
+	padding: 0 0 2em 0; 
+}
+
+.contenido .contenido_item_datos h2{
+	color: #eba75e;
+	width: 80%;
+	margin: 1em auto 0 auto;
+}
+
+.contenido .contenido_item_datos p{
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
 }
 
 .contenido .contenido_item h1{
