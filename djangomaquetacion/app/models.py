@@ -9,6 +9,13 @@ class Menu(models.Model):
 	def __unicode__(self):
 		return  self.Descripcion
 
+class BannerInicio(models.Model):
+	Nombre = models.CharField(max_length=140)
+	Imagen = models.ImageField(upload_to='banner',verbose_name='Imágen')
+	Posicion = models.IntegerField(default=0)
+
+	def __unicode__(self):
+		return self.Nombre
 
 class Articulo(models.Model):
 	Titulo = models.CharField(max_length=140)
