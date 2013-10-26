@@ -30,7 +30,7 @@
 				<h1>{{ nosotros_item.Titulo }}</h1>
 				<hr/>
 				<p>
-					{{ nosotros_item.Descripcion }}
+					{{ nosotros_item.Descripcion|safe }}
 				</p>
 			</article>
 		{% endfor %}

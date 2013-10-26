@@ -28,18 +28,11 @@
 			<nav id="nav_menu">
 				<ul>
 					<li><a href="{% url "home" %}">Inicio</a></li>
-					<li><a href="{% url "nosotros" 2 %}">Nosotros</a></li>
-					<li><a href="{% url "home" %}">Galería</a></li>
-					<li><a href="{% url "home" %}">El Taller</a></li>
+					<li><a href="{% url "nosotros" %}">Nosotros</a></li>
+					<li><a href="{% url "galeria" %}">Galería</a></li>
+					<li><a href="{% url "taller" %}">El Taller</a></li>
 					<li><a href="{% url "home" %}">El Artista</a></li>
 					<li><a href="{% url "home" %}">Contacto</a></li>
-					<!-- {% for menu_list in menu %}
-						{% if menu_list.Menu_id == 1 %}
-							<li><a href="{% url "home" %}">{{ menu_list.Descripcion }}</a></li>
-						{% else %}
-							<li><a href="{% url "nosotros" menu_list.pk %}">{{ menu_list.Descripcion }}</a></li>
-						{% endif %}
-					{% endfor %} -->
 				</ul>
 			</nav>
 		</div>

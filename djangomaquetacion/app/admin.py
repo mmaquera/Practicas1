@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Menu, Articulo, Comentario,Exposicion,BannerInicio,Nosotro,BannerNosotro
+from models import Menu, Articulo, Comentario,Exposicion,BannerInicio,Nosotro,BannerNosotro,Galeria,Taller
 
 admin.site.register(Menu)
 admin.site.register(Articulo)
@@ -8,3 +8,5 @@ admin.site.register(Exposicion)
 admin.site.register(BannerInicio)
 admin.site.register(Nosotro)
 admin.site.register(BannerNosotro)
+admin.site.register(Galeria)
+admin.site.register(Taller)

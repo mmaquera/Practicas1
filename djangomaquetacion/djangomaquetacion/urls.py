@@ -15,7 +15,9 @@ urlpatterns = patterns('',
 	url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT,}),
 
     url(r'^$','app.views.home',name='home'),
-    url(r'^nosotros/(?P<id_menu>\d+)$','app.views.nosotros', name='nosotros'),
+    url(r'^nosotros/$','app.views.nosotros', name='nosotros'),
+    url(r'^galeria/$','app.views.galeria', name='galeria'),
+    url(r'^taller/$', 'app.views.taller', name='taller'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # Uncomment the next line to enable the admin:

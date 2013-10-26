@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render_to_response,get_object_or_404
-from models import Menu, Articulo,Comentario, Exposicion,BannerInicio,Nosotro,BannerNosotro
+from models import Menu, Articulo, Comentario, Exposicion, BannerInicio, Nosotro, BannerNosotro, Galeria, Taller
 from django.template import RequestContext
 
 def home(request):
@@ -14,12 +14,22 @@ def home(request):
 	return render_to_response(template, diccionario, context_instance=RequestContext(request))
 
 
-def nosotros(request, id_menu):
+def nosotros(request):
 	nosotros = Nosotro.objects.all()
 	banner = BannerNosotro.objects.order_by('Posicion')
 	template = 'nosotros.html'
 	diccionario = {'nosotros' : nosotros ,'banner' : banner}
 	return render_to_response(template, diccionario, context_instance = RequestContext(request))
 
-def galeria(request,id_menu):
-	pass
+def galeria(request):
+	galeria = Galeria.objects.all()
+	template = 'galeria.html'
+	diccionario = { 'galeria' : galeria }
+	return render_to_response(template,diccionario, context_instance = RequestContext(request))
+
+	
+def taller(request):
+	taller = Taller.objects.order_by('Posicion')
+	template = 'taller.html'
+	diccionario = { 'taller' : taller }
+	return render_to_response(template,diccionario,context_instance = RequestContext(request))

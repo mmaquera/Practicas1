@@ -68,6 +68,7 @@ class Taller(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 	Imagen = models.ImageField(upload_to='app',verbose_name='Imágen')
+	Posicion = models.IntegerField(default=0)
 
 	def __unicode__(self):
-		return self.Titulo
+		return '%i - %s' % (self.Posicion,self.Titulo)

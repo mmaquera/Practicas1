@@ -1,90 +1,29 @@
-<!doctype html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Llanco</title>
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="galeria.css">
-</head>
-<body>
-	<div id="wrapper">
-		<header>
-			<nav id="nav_cabecera">
-				<ul>
-					<li><a href='#'>Español</a></li>
-					<li><a href='#'>Ingles</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div id="menu">
+{% extends 'base.html' %}
+{% block title %}Galeria - Llanco{% endblock %}
+{% block css %}
+	<link rel="stylesheet" href="/static/css/normalize.css">
+	<link rel="stylesheet" href="/static/css/galeria.css">
+{% endblock %}
+{% block js %}{% endblock %}
+{% block content %}
+	<section class="contenido">
+	{% if galeria %}
+		{% for galeria_list in galeria %}
+		<article class="contenido_item">
 			<figure>
-				<img src="imgs/logo.png">
+				<img src="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" alt="">
 			</figure>
-			<nav id="nav_menu">
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="nosotros.html">Nosotros</a></li>
-					<li><a href="galeria.html">Galeria</a></li>
-					<li><a href="#">El Taller</a></li>
-					<li><a href="#">El Artista</a></li>
-					<li><a href="#">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
-		<section class="contenido">
-			<article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			 <article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			<article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			<article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			 <article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			<article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			<article class="contenido_item">
-				<figure>
-					<img src="1.jpg" alt="">
-				</figure>
-				<p>Español Español</p>
-			</article>
-			<article id="radio">
-				<h1>Escucha una demo elaborado por nuestro cliente</h1>
-				<figure>
-					<img src="radio.jpg" alt="">
-				</figure>
-			</article>
-		</section>
-		<footer id="pie">
-			<p><strong>Luthier Italo Llanco 2013</strong></p>
-			<p>Huancayo - Perú</p>
-		</footer>
-	</div>
-</body>
-</html>
+			<p>{{ galeria_list.Descripcion }}</p>
+		</article>
+		{% endfor %}	
+	{% else %}
+		<h2>Imagenes en mantenimiento</h2>
+	{% endif %}
+		<article id="radio">
+			<h1>Escucha una demo elaborado por nuestro cliente</h1>
+			<figure>
+				<img src="{{ MEDIA_URL }}app/radio.jpg" alt="">
+			</figure>
+		</article>
+	</section>
+{% endblock %}
