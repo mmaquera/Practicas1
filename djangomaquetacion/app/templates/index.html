@@ -14,18 +14,12 @@
 <div>
 	<div class="callbacks_container">
       	<ul class="rslides" id="slider4">
-	        <li>
-	          <img src="{{ MEDIA_URL }}app/guitarra4.png" alt="">
-	          <p class="caption">This is a caption</p>
-	        </li>
-	        <li>
-	          <img src="{{ MEDIA_URL }}app/Koala_1.jpg" alt="">
-	          <p class="caption">This is another caption</p>
-	        </li>
-        	<li>
-          		<img src="{{ MEDIA_URL }}app/djangopony.png" alt="">
-          		<p class="caption">The third caption</p>
-        	</li>
+      		{% for banner_list in banner %}
+      			<li>
+	          		<img src="{{ MEDIA_URL }}{{ banner_list.Imagen }}" alt="">
+	          		<p class="caption">{{ banner_list.Nombre }}</p>
+	        	</li>
+      		{% endfor %}
       	</ul>
     </div>
 </div>

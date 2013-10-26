@@ -14,29 +14,23 @@
 <div>
 	<div class="callbacks_container">
       	<ul class="rslides" id="slider4">
-	        <li>
-	          <img src="{{ MEDIA_URL }}app/guitarra4.png" alt="">
-	          <p class="caption">This is a caption</p>
-	        </li>
-	        <li>
-	          <img src="{{ MEDIA_URL }}app/Koala_1.jpg" alt="">
-	          <p class="caption">This is another caption</p>
-	        </li>
-        	<li>
-          		<img src="{{ MEDIA_URL }}app/djangopony.png" alt="">
-          		<p class="caption">The third caption</p>
-        	</li>
+      		{% for banner_list in banner %}
+      			<li>
+		          <img src="{{ MEDIA_URL }}{{ banner_list.Imagen }}" alt="">
+		          <p class="caption">{{ banner_list.Descripcion }}</p>
+		        </li>
+      		{% endfor %}
       	</ul>
     </div>
 </div>
 <section class="contenido">
-	{% if articulo %}
-		{% for articulo_item in articulo %}
+	{% if nosotros %}
+		{% for nosotros_item in nosotros %}
 			<article class="contenido_item">
-				<h1>{{ articulo_item.Titulo }}</h1>
+				<h1>{{ nosotros_item.Titulo }}</h1>
 				<hr/>
 				<p>
-					{{ articulo_item.Descripcion }}
+					{{ nosotros_item.Descripcion }}
 				</p>
 			</article>
 		{% endfor %}
