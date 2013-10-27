@@ -20,7 +20,6 @@ class BannerInicio(models.Model):
 class Articulo(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
-	Menu = models.ForeignKey(Menu)
 
 	def __unicode__(self):
 		return self.Titulo
@@ -37,7 +36,6 @@ class Exposicion(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 	Imagen = models.ImageField(upload_to='app', verbose_name='Imágen')
-	Menu = models.ForeignKey(Menu)
 
 	def __unicode__(self):
 		return self.Titulo
@@ -55,7 +53,7 @@ class BannerNosotro(models.Model):
 	Posicion = models.IntegerField(default=0)
 
 	def __unicode__(self):
-		return 'Comentario: %s - Posicion: %i' % (self.Descripcion,self.Posicion)
+		return '%i - %s' % (self.Posicion,self.Descripcion)
 
 class Galeria(models.Model):
 	Descripcion = models.CharField(max_length=140)
@@ -68,6 +66,30 @@ class Taller(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 	Imagen = models.ImageField(upload_to='app',verbose_name='Imágen')
+	Posicion = models.IntegerField(default=0)
+
+	def __unicode__(self):
+		return '%i - %s' % (self.Posicion,self.Titulo)
+
+class Artista(models.Model):
+	Titulo = models.CharField(max_length=140)
+	Descripcion = models.TextField(max_length=255)
+
+	def __unicode__(self):
+		return self.Titulo
+
+class BannerArtista(models.Model):
+	Descripcion = models.CharField(max_length=140)
+	Imagen = models.ImageField(upload_to = 'banner', verbose_name='Imágen')
+	Posicion = models.IntegerField(default=0)
+
+	def __unicode__(self):
+		return '%i - %s' % (self.Posicion,self.Descripcion)
+
+
+class DatosEmpresa(models.Model):
+	Titulo = models.CharField(max_length=140)
+	Descripcion = models.TextField(max_length=255)
 	Posicion = models.IntegerField(default=0)
 
 	def __unicode__(self):

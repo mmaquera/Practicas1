@@ -43,6 +43,7 @@ header #nav_cabecera ul li a{
 
 header #nav_cabecera ul li a:hover{
 	color: red;
+
 }
 
 #banner{
@@ -105,10 +106,11 @@ header #nav_cabecera ul li a:hover{
 	display: block;
 	text-decoration: none;
 	padding: 0.5em 1em 0.5em 1em;
+
 }
 
 #menu #nav_menu ul li a:hover{
-	color: red;
+	font-weight: bold;
 }
 
 #pie{

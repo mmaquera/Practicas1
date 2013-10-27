@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Nosotros - Llanco{% endblock %}
+{% block css %}
+	<link rel="stylesheet" href="/static/css/artista.css">
+
+	<link rel="stylesheet" href="/static/css/responsiveslides.css">
+	<link rel="stylesheet" href="/static/css/demo.css">
+{% endblock %}
+{% block js %}
+	<script src="/static/js/responsiveslides.min.js"></script>
+	<script src="/static/js/master.js"></script>
+{% endblock %}
+{% block content %}
+	<div>
+		<div class="callbacks_container">
+	      	<ul class="rslides" id="slider4">
+	      		{% for banner_list in banner %}
+	      			<li>
+			          <img src="{{ MEDIA_URL }}{{ banner_list.Imagen }}" alt="">
+			          <p class="caption">{{ banner_list.Descripcion }}</p>
+			        </li>
+	      		{% endfor %}
+	      	</ul>
+	    </div>
+	</div>
+	<section class="contenido">
+		{% for artista_list in artista %}
+			<article class="contenido_item">
+				<h1>{{ artista_list.Titulo }}</h1>
+				<hr/>
+				<p>
+					{{ artista_list.Descripcion }}
+				</p>
+			</article>
+		{% endfor %}
+	</section>
+{% endblock %}
