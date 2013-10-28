@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/static/css/normalize.css">
 	{% block css %}{% endblock %}
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/static/js/modernizr.custom.18371.js"></script>
 	{% block js %}{% endblock %}
 </head>
 <body>
@@ -22,7 +23,7 @@
 			</nav>
 		</header>
 		<div id="menu">
-			<figure>
+			<figure id="logo">
 				<img src="{{ MEDIA_URL }}app/logo.png">
 			</figure>
 			<nav id="nav_menu">
@@ -35,6 +36,14 @@
 					<li><a href="{% url "contacto" %}">Contacto</a></li>
 				</ul>
 			</nav>
+			<div id="network_social">
+				<figure>
+					<img src="/static/imgs/images.jpg" alt="">
+				</figure>
+				<figure>
+					<img src="/static/imgs/images.jpg" alt="">
+				</figure>
+			</div>
 		</div>
 		{% block content %}{% endblock %}
 		<footer id="pie">

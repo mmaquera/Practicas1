@@ -11,7 +11,7 @@
 	<script src="/static/js/master.js"></script>
 {% endblock %}
 {% block content %}
-<div>
+
 	<div class="callbacks_container">
       	<ul class="rslides" id="slider4">
       		{% for banner_list in banner %}
@@ -22,13 +22,13 @@
       		{% endfor %}
       	</ul>
     </div>
-</div>
+
 {% for articulo_item in articulo %}
 	<section class="contenido">
 		<article class="contenido_item">
 			<h1>{{ articulo_item.Titulo }}</h1>
 			<hr/>
-			<p>{{ articulo_item.Descripcion }}</p>
+			<p>{{ articulo_item.Descripcion|safe }}</p>
 		</article>
 		<article class = "contenido_item_pen">
 		{% for comentario_item in comentario %}
