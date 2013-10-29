@@ -17,6 +17,11 @@ class BannerInicio(models.Model):
 	def __unicode__(self):
 		return 'Comentario: %s - Posicion: %i' % (self.Nombre,self.Posicion)
 
+	def enviar_imagen(self):
+		return self.Imagen
+
+
+
 class Articulo(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
@@ -37,6 +42,9 @@ class Exposicion(models.Model):
 	Descripcion = models.TextField(max_length=255)
 	Imagen = models.ImageField(upload_to='app', verbose_name='Imágen')
 
+	def enviar_imagen(self):
+		return self.Imagen
+
 	def __unicode__(self):
 		return self.Titulo
 
@@ -55,12 +63,18 @@ class BannerNosotro(models.Model):
 	def __unicode__(self):
 		return '%i - %s' % (self.Posicion,self.Descripcion)
 
+	def enviar_imagen(self):
+		return self.Imagen
+
 class Galeria(models.Model):
 	Descripcion = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to='galeria',verbose_name='Imágen')
 
 	def __unicode__(self):
 		return self.Descripcion
+
+	def enviar_imagen(self):
+		return self.Imagen
 
 class Taller(models.Model):
 	Titulo = models.CharField(max_length=140)
@@ -70,6 +84,9 @@ class Taller(models.Model):
 
 	def __unicode__(self):
 		return '%i - %s' % (self.Posicion,self.Titulo)
+
+	def enviar_imagen(self):
+		return self.Imagen
 
 class Artista(models.Model):
 	Titulo = models.CharField(max_length=140)
@@ -86,6 +103,8 @@ class BannerArtista(models.Model):
 	def __unicode__(self):
 		return '%i - %s' % (self.Posicion,self.Descripcion)
 
+	def enviar_imagen(self):
+		return self.Imagen
 
 class DatosEmpresa(models.Model):
 	Titulo = models.CharField(max_length=140)
@@ -94,3 +113,5 @@ class DatosEmpresa(models.Model):
 
 	def __unicode__(self):
 		return '%i - %s' % (self.Posicion,self.Titulo)
+
+

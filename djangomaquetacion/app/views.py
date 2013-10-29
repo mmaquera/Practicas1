@@ -1,9 +1,11 @@
 # Create your views here.
-from django.shortcuts import render_to_response,get_object_or_404
+from django.shortcuts import render_to_response,get_object_or_404,render
 from models import Menu, Articulo, Comentario, Exposicion, BannerInicio, Nosotro, BannerNosotro, Galeria, Artista, BannerArtista, Taller, DatosEmpresa
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from forms import ContactoForm
+
+
 
 def home(request):
 	menu = Menu.objects.all()

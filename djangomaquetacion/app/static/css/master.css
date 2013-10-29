@@ -45,7 +45,6 @@ header #nav_cabecera ul li a{
 
 header #nav_cabecera ul li a:hover{
 	color: red;
-
 }
 
 #banner{
@@ -54,6 +53,7 @@ header #nav_cabecera ul li a:hover{
 
 #contend{
 	text-align: center;
+	margin: 2.5em 0 0 0;
 }
 
 #contend .contend_item{
@@ -116,7 +116,6 @@ header #nav_cabecera ul li a:hover{
 	display: block;
 	text-decoration: none;
 	padding: 0.5em 1.5em 0.5em 1.5em;
-
 }
 
 #menu #nav_menu ul li a:hover{
