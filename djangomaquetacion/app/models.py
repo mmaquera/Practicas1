@@ -3,19 +3,11 @@
 from django.db import models
 
 # Create your models here.
-class Menu(models.Model):
-	Descripcion = models.CharField(max_length=140)
-
-	def __unicode__(self):
-		return  self.Descripcion
 
 class BannerInicio(models.Model):
 	Nombre = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to='banner',verbose_name='Imágen')
 	Posicion = models.IntegerField(default=0)
-
-	def __unicode__(self):
-		return 'Comentario: %s - Posicion: %i' % (self.Nombre,self.Posicion)
 
 	def enviar_imagen(self):
 		return self.Imagen
@@ -29,13 +21,12 @@ class Articulo(models.Model):
 	def __unicode__(self):
 		return self.Titulo
 
+
 class Comentario(models.Model):
 	Descripcion = models.TextField(max_length=255)
 	Autor = models.CharField(max_length=140)
 	Articulo = models.ForeignKey(Articulo)
 
-	def __unicode__(self):
-		return self.Descripcion
 
 class Exposicion(models.Model):
 	Titulo = models.CharField(max_length=140)
@@ -45,23 +36,15 @@ class Exposicion(models.Model):
 	def enviar_imagen(self):
 		return self.Imagen
 
-	def __unicode__(self):
-		return self.Titulo
-
 class Nosotro(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 
-	def __unicode__(self):
-		return self.Titulo
 
 class BannerNosotro(models.Model):
 	Descripcion = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to = 'banner', verbose_name='Imágen')
 	Posicion = models.IntegerField(default=0)
-
-	def __unicode__(self):
-		return '%i - %s' % (self.Posicion,self.Descripcion)
 
 	def enviar_imagen(self):
 		return self.Imagen
@@ -69,9 +52,6 @@ class BannerNosotro(models.Model):
 class Galeria(models.Model):
 	Descripcion = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to='galeria',verbose_name='Imágen')
-
-	def __unicode__(self):
-		return self.Descripcion
 
 	def enviar_imagen(self):
 		return self.Imagen
@@ -82,9 +62,6 @@ class Taller(models.Model):
 	Imagen = models.ImageField(upload_to='app',verbose_name='Imágen')
 	Posicion = models.IntegerField(default=0)
 
-	def __unicode__(self):
-		return '%i - %s' % (self.Posicion,self.Titulo)
-
 	def enviar_imagen(self):
 		return self.Imagen
 
@@ -92,16 +69,10 @@ class Artista(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 
-	def __unicode__(self):
-		return self.Titulo
-
 class BannerArtista(models.Model):
 	Descripcion = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to = 'banner', verbose_name='Imágen')
 	Posicion = models.IntegerField(default=0)
-
-	def __unicode__(self):
-		return '%i - %s' % (self.Posicion,self.Descripcion)
 
 	def enviar_imagen(self):
 		return self.Imagen
@@ -110,8 +81,3 @@ class DatosEmpresa(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)
 	Posicion = models.IntegerField(default=0)
-
-	def __unicode__(self):
-		return '%i - %s' % (self.Posicion,self.Titulo)
-
-
