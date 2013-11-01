@@ -28,20 +28,17 @@
 			</figure>
 			<nav id="nav_menu">
 				<ul>
-					<li><a href="{% url "home" %}">Inicio</a></li>
-					<li><a href="{% url "nosotros" %}">Nosotros</a></li>
-					<li><a href="{% url "galeria" %}">Galería</a></li>
-					<li><a href="{% url "taller" %}">El Taller</a></li>
-					<li><a href="{% url "artista" %}">El Artista</a></li>
-					<li><a href="{% url "contacto" %}">Contacto</a></li> 
+					{% for menu_list in menu %}
+						<li><a href="{{ menu_list.url }}" {% if menu_list.active %} style = "font-weight: bold;" {% endif %} >{{ menu_list.name }}</a></li>	
+					{% endfor %}
 				</ul>
 			</nav>
 			<div id="network_social">
 				<figure>
-					<img src="/static/imgs/images.jpg" alt="">
+					<a href="https://www.facebook.com/italo.llancoalarcon?fref=ts"><img src="/static/imgs/wood-facebook.png" alt=""></a>
 				</figure>
 				<figure>
-					<img src="/static/imgs/images.jpg" alt="">
+					<a href="https://www.youtube.com/"><img src="/static/imgs/youtube.png" alt=""></a>
 				</figure>
 			</div>
 		</div>

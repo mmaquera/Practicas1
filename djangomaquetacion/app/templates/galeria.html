@@ -3,15 +3,27 @@
 {% block css %}
 	<link rel="stylesheet" href="/static/css/normalize.css">
 	<link rel="stylesheet" href="/static/css/galeria.css">
+	<link rel="stylesheet" href="/static/css/colorbox.css" />
 {% endblock %}
-{% block js %}{% endblock %}
+{% block js %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/static/js/jquery.colorbox.js"></script>
+	<script>
+		$(document).ready(function(){
+			//Examples of how to assign the Colorbox event to elements
+			$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+		});
+	</script>
+{% endblock %}
 {% block content %}
 	<section class="contenido">
 	{% if galeria %}
 		{% for galeria_list in galeria %}
 		<article class="contenido_item">
 			<figure>
-				<img src="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" alt="">
+				<a class='iframe' href="{% url "galeria_imagen" %}">
+					<img src="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" alt="">
+				</a>
 			</figure>
 			<p>{{ galeria_list.Descripcion }}</p>
 		</article>

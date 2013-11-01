@@ -22,7 +22,7 @@ h1 , p{
 }
 
 header #nav_cabecera{
-	padding: 2.5em 4em 0 0;
+	padding: 0.5em 4em 0 0;
 }
 
 header #nav_cabecera ul{
@@ -82,18 +82,18 @@ header #nav_cabecera ul li a:hover{
 
 #menu{
 	position: relative;
- 	padding: 4.5em 0 6em 0;
-	margin: 0 0 2em 0; 
+ 	padding: 2.5em 0 4em 0;
+	margin: 0 0 1em 0; 
 }
 
 #menu #logo{
 	position: absolute;
-	top: -60px;
+	top: -40px;
 	margin: 0.5em 3em 0 3em;
 }
 
 #menu #logo img{
-	width: 178px;
+	width: 120px;
 }
 
 #menu #logo, #menu #nav_menu, #menu #nav_menu ul li {

@@ -20,6 +20,8 @@ urlpatterns = patterns('',
     url(r'^taller/$', 'app.views.taller', name='taller'),
     url(r'^artista/$','app.views.artista' , name='artista'),
     url(r'^contacto/$', 'app.views.contacto', name = 'contacto'),
+
+    url(r'^galeria_imagen/$', 'app.views.galeria_imagen' , name = 'galeria_imagen')
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # Uncomment the next line to enable the admin:
