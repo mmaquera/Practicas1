@@ -35,35 +35,26 @@
 			</div>
 			<div id="thumbs" class="navigation">
 				<ul class="thumbs noscript">
-					<!-- <li>
-						<a class="thumb" name="leaf" href="http://farm4.static.flickr.com/3261/2538183196_8baf9a8015.jpg" title="Title #0">
-							<img src="http://farm4.static.flickr.com/3261/2538183196_8baf9a8015_s.jpg" alt="Title #0" />
-						</a>
-						<div class="caption">
-							<div class="download">
-								<a href="http://farm4.static.flickr.com/3261/2538183196_8baf9a8015_b.jpg">Download Original</a>
-							</div>
-							<div class="image-title">Title #0</div>
-							<div class="image-desc">Description</div>
-						</div>
-					</li> -->
-					{% for galeria_list in galeria %}
+					{% if detalleGaelriaImagen %}
+					{% for galeria_list in detalleGaelriaImagen %}
 					<li>
-						<a class="thumb" name="leaf" href="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" title="Title #0">
+						<a class="thumb" name="leaf" href="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" title="{{ galeria_list.Titulo }}">
 							<img src="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" width="75px" heigth="75px"/>
 						</a>
 						<div class="caption">
-							<!-- <div class="download">
-								<a href="http://farm4.static.flickr.com/3261/2538183196_8baf9a8015_b.jpg">Download Original</a>
-							</div> -->
-							<div class="image-title">Title #0</div>
-							<div class="image-desc">Description</div>
+							<div class="image-title">{{ galeria_list.Titulo }}</div>
+							<div class="image-desc">{{ galeria_list.Descripcion|safe }}</div>
 						</div>
 					</li>
 					{% endfor %}
+					{% else %}
+					<li>
+					<h1>Imagenes no disponibles</h1>
+					</li>
+					{% endif %}
+					
 				</ul>
 			</div>
-			<!-- End Advanced Gallery Html Containers -->
 			<div style="clear: both;"></div>
 		</div>
 	</div>
@@ -97,10 +88,10 @@
 				loadingContainerSel:       '#loading',
 				renderSSControls:          true,
 				renderNavControls:         true,
-				playLinkText:              'Play Slideshow',
-				pauseLinkText:             'Pause Slideshow',
-				prevLinkText:              '&lsaquo; Previous Photo',
-				nextLinkText:              'Next Photo &rsaquo;',
+				playLinkText:              'Play',
+				pauseLinkText:             'Pause',
+				prevLinkText:              '&lsaquo; Previous',
+				nextLinkText:              'Next &rsaquo;',
 				nextPageLinkText:          'Next &rsaquo;',
 				prevPageLinkText:          '&lsaquo; Prev',
 				enableHistory:             true,

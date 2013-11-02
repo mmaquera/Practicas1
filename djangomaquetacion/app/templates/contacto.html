@@ -10,10 +10,13 @@
 		<section class="contenido">
 			<form action="." method="POST">
 			<article class="contenido_item">
+				<h1>Envie sus consultas y le responderemos en la brebedad posible</h1>
+				<hr>
 				{% csrf_token %}
 				{{ form.as_p }}
-				<p>
-					<button>Enviar</button>
+				<p id="button">
+					<input type="reset" value="Limpiar">
+					<input type="submit" value="Enviar">
 				</p>
 			</article>
 			</form>

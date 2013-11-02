@@ -17,7 +17,6 @@
 	      		{% for banner_list in banner %}
 	      			<li>
 			          <img src="{{ MEDIA_URL }}{{ banner_list.Imagen }}" alt="">
-			          <p class="caption">{{ banner_list.Descripcion }}</p>
 			        </li>
 	      		{% endfor %}
 	      	</ul>
@@ -29,7 +28,7 @@
 				<h1>{{ artista_list.Titulo }}</h1>
 				<hr/>
 				<p>
-					{{ artista_list.Descripcion }}
+					{{ artista_list.Descripcion|safe }}
 				</p>
 			</article>
 		{% endfor %}

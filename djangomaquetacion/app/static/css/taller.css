@@ -127,6 +127,10 @@ header #nav_cabecera ul li a:hover{
 	color: #553a1d;
 }
 
+.contenido .contenido_item p{
+	text-align: justify;
+}
+
 .contenido .contenido_item figure img{
 	height: 100%;
 	max-width: 462px;

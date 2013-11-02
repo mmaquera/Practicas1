@@ -21,7 +21,7 @@
 		{% for galeria_list in galeria %}
 		<article class="contenido_item">
 			<figure>
-				<a class='iframe' href="{% url "galeria_imagen" %}">
+				<a class='iframe' href="{% url "galeria_imagen" galeria_list.pk %}">
 					<img src="{{ MEDIA_URL }}{{ galeria_list.Imagen }}" alt="">
 				</a>
 			</figure>

@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render_to_response,get_object_or_404,render
-from models import Articulo, Comentario, Exposicion, BannerInicio, Nosotro, BannerNosotro, Galeria, Artista, BannerArtista, Taller, DatosEmpresa
+from models import Articulo, Comentario, Exposicion, BannerInicio, Nosotro, BannerNosotro, Galeria, DetalleGaleria, Artista, BannerArtista, Taller, DatosEmpresa
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from forms import ContactoForm
@@ -56,10 +56,12 @@ def contacto(request):
 
 	return  render_to_response(template,diccionario,context_instance = RequestContext(request))
 
-def galeria_imagen(request):
-	galeria = Galeria.objects.all()
+def galeria_imagen(request,id_galeria):
+	idGaleria = get_object_or_404(Galeria,pk=id_galeria)
+	detalleGaelriaImagen = DetalleGaleria.objects.filter(Galeria_id=idGaleria)
 	template = 'galeria_imagenes.html'
-	diccionario = {'galeria' : galeria}
-	return render_to_response(template,diccionario,context_instance = RequestContext(request))
+	diccionario = {'detalleGaelriaImagen':detalleGaelriaImagen}
+	return render_to_response(template,diccionario,context_instance=RequestContext(request))
+
 
  

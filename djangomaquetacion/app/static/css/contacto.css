@@ -74,8 +74,8 @@ header #nav_cabecera ul li a:hover{
 }
 
 #menu #network_social{
-	position: absolute;
 	bottom: 0;
+	position: absolute;
 	right: 60px;
 }
 
@@ -93,29 +93,31 @@ header #nav_cabecera ul li a:hover{
 
 #pie{
 	color: #553a1d;
-	padding: 4em 0 1em 0;
 	text-align: center;
+	padding: 4em 0 1em 0;
 }
 
 #wrapper{
 	background: #EFD6AD;
 	border-radius: 2.5px;
-	width: 76%;
 	margin: 0 auto;
+	width: 76%;
 }
 
 .contenido {
-	padding: 2em 1.5em 1em 1.5em;
 	margin: 0 0 3em 0; 
+	padding: 2em 1.5em 1em 1.5em;
 	text-align: center;
 }
 
 .contenido form , .contenido .contenido_item_datos{
 	display: inline-block;
-	vertical-align: top;
+	max-width: 380px;
 	text-align: left;
-	margin: 0 1%;
-	width: 44%;
+	margin: 0 0 0 10%;
+	vertical-align: top;
+	width: 100%;
+
 }
 
 .contenido .contenido_item h1{
@@ -132,8 +134,8 @@ header #nav_cabecera ul li a:hover{
 
 .contenido .contenido_item_datos h2{
 	color: #eba75e;
-	width: 80%;
 	margin: 1em auto 0 auto;
+	width: 80%;
 }
 
 .contenido .contenido_item_datos p{
@@ -148,15 +150,24 @@ header #nav_cabecera ul li a:hover{
 
 .contenido .contenido_item p label{
 	display: block;
-	text-align: right;
-	width: 100px;
+	text-align: left;
+	width: 80px;
 }
 
 .contenido .contenido_item p input{
 	display: block;
+	width: 289px;
 }
 
 .contenido .contenido_item p input, .contenido .contenido_item p label{
 	display: inline-block;
 	vertical-align: top;
+}
+
+.contenido .contenido_item #button{
+	text-align: center;
+}
+
+.contenido .contenido_item #button input{
+	width: 100px;
 }

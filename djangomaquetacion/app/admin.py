@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Articulo, Comentario,Exposicion,BannerInicio,Nosotro,BannerNosotro,Galeria,Taller,DatosEmpresa,Artista,BannerArtista
+from models import Articulo, Comentario,Exposicion,BannerInicio,Nosotro,BannerNosotro,Galeria,DetalleGaleria,Taller,DatosEmpresa,Artista,BannerArtista
 
 class ArticuloAdmin(admin.ModelAdmin):
 	list_display = ('Titulo','Descripcion',)
@@ -53,6 +53,15 @@ class GaleriaAdmin(admin.ModelAdmin):
 		return tag
 	Imagen_galeria.allow_tags = True
 
+class DetalleGaleriaAdmin(admin.ModelAdmin):
+	list_display = ('Titulo','Descripcion','Imagen_Detalle_Galeria','Galeria',)
+
+	def Imagen_Detalle_Galeria(self,obj):
+		url = obj.enviar_imagen()
+		tag = '<img src ="/media/%s" width="100px" />' % url
+		return tag
+	Imagen_Detalle_Galeria.allow_tags = True
+
 class TallerAdmin(admin.ModelAdmin):
 	list_display = ('Titulo','Descripcion','Imagen_taller','Posicion',)
 
@@ -84,6 +93,7 @@ admin.site.register(BannerInicio,BannerInicioAdmin)
 admin.site.register(Nosotro,NosotrosAdmin)
 admin.site.register(BannerNosotro,BannerNosotrosAdmin)
 admin.site.register(Galeria,GaleriaAdmin)
+admin.site.register(DetalleGaleria,DetalleGaleriaAdmin)
 admin.site.register(Taller,TallerAdmin)
 admin.site.register(DatosEmpresa,DatosEmpresaAdmin)
 admin.site.register(Artista,ArtistaAdmin)

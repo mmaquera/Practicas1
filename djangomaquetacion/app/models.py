@@ -53,6 +53,18 @@ class Galeria(models.Model):
 	Descripcion = models.CharField(max_length=140)
 	Imagen = models.ImageField(upload_to='galeria',verbose_name='Imágen')
 
+	def __unicode__(self):
+		return self.Descripcion
+
+	def enviar_imagen(self):
+		return self.Imagen
+
+class DetalleGaleria(models.Model):
+	Titulo = models.CharField(max_length=140)
+	Descripcion = models.TextField(max_length=255)
+	Imagen = models.ImageField(upload_to='galeria',verbose_name="Imágen")
+	Galeria = models.ForeignKey(Galeria)
+
 	def enviar_imagen(self):
 		return self.Imagen
 
