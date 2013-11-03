@@ -1,9 +1,11 @@
 # Create your views here.
+#enconding:utf-8
 from django.shortcuts import render_to_response,get_object_or_404,render
 from models import Articulo, Comentario, Exposicion, BannerInicio, Nosotro, BannerNosotro, Galeria, DetalleGaleria, Artista, BannerArtista, Taller, DatosEmpresa
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from forms import ContactoForm
+from django.core.mail import EmailMultiAlternatives
 
 
 
@@ -46,7 +48,16 @@ def contacto(request):
 	if request.method == 'POST':
 		form = ContactoForm(request.POST)
 		if form.is_valid():
-			return HttpResponseRedirect('/contacto/')
+			nombre = form.cleaned_data['Nombre']
+			email = form.cleaned_data['Email']
+			asunto = form.cleaned_data['Asunto']
+			mensaje = form.cleaned_data['Mensaje']
+
+			to_admin = 'llanco.artista@gmail.com'
+			html_content = 'Informacion Recibida:<br><br>Nombre:<br>%s<br><br>E-mail:<br>%s<br><br>Mensaje:<br>%s' % (nombre,email,mensaje)
+			msg = EmailMultiAlternatives(asunto,html_content,'from@server.com',[to_admin])
+			msg.attach_alternative(html_content, 'text/html')
+			msg.send()
 	else:
 		form = ContactoForm()
 

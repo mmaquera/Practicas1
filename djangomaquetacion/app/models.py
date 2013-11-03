@@ -12,8 +12,6 @@ class BannerInicio(models.Model):
 	def enviar_imagen(self):
 		return self.Imagen
 
-
-
 class Articulo(models.Model):
 	Titulo = models.CharField(max_length=140)
 	Descripcion = models.TextField(max_length=255)

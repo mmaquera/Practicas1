@@ -28,7 +28,7 @@ header #nav_cabecera ul li a{
 }
 
 header #nav_cabecera ul li a:hover{
-	color: red;
+	font-weight: bold;
 }
 
 #menu{
@@ -117,7 +117,6 @@ header #nav_cabecera ul li a:hover{
 	margin: 0 0 0 10%;
 	vertical-align: top;
 	width: 100%;
-
 }
 
 .contenido .contenido_item h1{

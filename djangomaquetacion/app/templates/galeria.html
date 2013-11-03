@@ -4,6 +4,37 @@
 	<link rel="stylesheet" href="/static/css/normalize.css">
 	<link rel="stylesheet" href="/static/css/galeria.css">
 	<link rel="stylesheet" href="/static/css/colorbox.css" />
+	<style>
+	@media screen and (max-width: 360px){
+		header #nav_cabecera{
+			padding: 0.5em 0.5em 0 0;
+		}
+		
+		#menu{
+			position: relative;
+		 	padding: 2em 0 4em 0;
+			margin: 0 0 1em 0; 
+		}
+		#menu #logo{
+			position: absolute;
+			top: 30px;
+			margin: 0.5em 3em 0 3em;
+		}
+
+		#menu #nav_menu{
+			margin: 0 0 0 13em;
+		}
+
+		.contenido #radio{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 1020px){
+		#wrapper{	
+			width: 100%;
+		}
+	}
+	</style>
 {% endblock %}
 {% block js %}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -14,6 +45,10 @@
 			$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
 		});
 	</script>
+{% endblock %}
+{% block idioma %}
+	<li><a href='/galeria/'>Español</a></li>
+	<li><a href='#'>Ingles</a></li>
 {% endblock %}
 {% block content %}
 	<section class="contenido">

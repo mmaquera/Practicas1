@@ -33,7 +33,7 @@ header #nav_cabecera ul li a{
 }
 
 header #nav_cabecera ul li a:hover{
-	color: red;
+	font-weight: bold;
 }
 
 #menu{

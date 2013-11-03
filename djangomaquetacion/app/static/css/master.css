@@ -1,12 +1,11 @@
 @font-face {
-	font-family: 'iconic';
-	src:url('../fonts/iconic.eot');
-	src:url('../fonts/iconic.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/iconic.woff') format('woff'),
-		url('../fonts/iconic.ttf') format('truetype'),
-		url('../fonts/iconic.svg#iconic') format('svg');
-	font-weight: normal;
-	font-style: normal;
+	font-family:'RaphaelIcons';
+    src:url('../fonts/raphaelicons-webfont.eot');
+    src:url('../fonts/raphaelicons-webfont.woff') format('woff'), 
+    	url('../fonts/raphaelicons-webfont.ttf') format('truetype'), 
+    	url('../fonts/raphaelicons-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body{
@@ -44,7 +43,7 @@ header #nav_cabecera ul li a{
 }
 
 header #nav_cabecera ul li a:hover{
-	color: red;
+	font-weight: bold;
 }
 
 #banner{
@@ -188,14 +187,10 @@ header #nav_cabecera ul li a:hover{
 }
 
 .contenido .contenido_item_pen .contenido_item_pen_ figure{	
-	font-size: 50px;
+	font-family: 'RaphaelIcons';
+	font-size: 90px;
 	color: #e84351;
 	width: 20%;
-}
-
-.contenido .contenido_item_pen .contenido_item_pen_ figure:after{
-	content: "\e000";
-	font-family: 'iconic';
 }
 
 .contenido .contenido_item_pen .contenido_item_pen_ .contenido_item_pen_descrip{

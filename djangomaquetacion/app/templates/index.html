@@ -1,14 +1,55 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}Home - Llanco{% endblock %}
 {% block css %}
 	<link href="/static/css/master.css" rel="stylesheet" type="text/css" >
 	<link rel="stylesheet" href="/static/css/responsiveslides.css">
 	<link rel="stylesheet" href="/static/css/demo.css">
+	<style>
+	@media screen and (max-width: 360px){
+		header #nav_cabecera{
+			padding: 0.5em 0.5em 0 0;
+		}
+		
+		#menu{
+			position: relative;
+		 	padding: 2em 0 4em 0;
+			margin: 0 0 1em 0; 
+		}
+		#menu #logo{
+			position: absolute;
+			top: 30px;
+			margin: 0.5em 3em 0 3em;
+		}
+
+		#menu #nav_menu{
+			margin: 0 0 0 13em;
+		}
+
+		.contenido .contenido_item{
+			width: 100%;
+			margin: 0 2% 0 0;
+		}
+		.contenido .contenido_item_pen{
+			width: 100%;
+			margin: 0 0 0 1%;
+		}
+
+	}
+	@media screen and (max-width: 1020px){
+		#wrapper{	
+			width: 100%;
+		}
+	}
+	</style>
 {% endblock %}
 {% block js %}
 	<script src="/static/js/responsiveslides.min.js"></script>
 	<script src="/static/js/master.js"></script>
+{% endblock %}
+{% block idioma %}
+	<li><a href='/'>Español</a></li>
+	<li><a href='#'>Ingles</a></li>
 {% endblock %}
 {% block content %}
 
@@ -32,7 +73,7 @@
 		{% for comentario_item in comentario %}
 			{% if comentario_item.Articulo_id == articulo_item.id %}
 				<div class = "contenido_item_pen_">
-					<figure>
+					<figure>\
 					</figure>
 					<p class="contenido_item_pen_descrip">
 						<i>{{ comentario_item.Descripcion }}</i>
