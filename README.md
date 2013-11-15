@@ -1,8 +1,3 @@
-Practicas1
-==========
-
-Practicas1
-
 
 python--> 2.7.2
 
