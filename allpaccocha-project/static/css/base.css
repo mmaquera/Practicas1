@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: "Arial";
+	font-size: 16px;
+}
+
+#wrapper{
+	background-image: url("../imgs/background_2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	width: 1024px;
+	min-height: 723px;
+}
+
+#wrapper footer{
+	position: relative;
+}
+
+#wrapper footer #pie{
+	position: absolute;
+	right: 40px;
+	top: -40px;
+}
+
+#wrapper footer #pie figure{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#wrapper #contenido-inf{
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+
+#wrapper #contenido-inf div article figure img{
+	height: 110px;
+	width: 111px;
+}
+
+#wrapper #contenido-sup, #wrapper #contenido-sup-derecha{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#wrapper #contenido-sup{
+	height: 470px;
+	position: relative;
+	width: 300px;
+}
+
+#wrapper #contenido-sup figure{
+	position: absolute;
+	top: 4%;
+	right: 10px;
+}
+
+#wrapper #contenido-sup div{
+	position: absolute;
+	top: 135px;
+	left: 0px;
+}
+
+#wrapper #contenido-sup div nav{
+	width: 300px;
+}
+
+#wrapper #contenido-sup div nav ul{
+	list-style-type: none;
+	text-align: right;
+	width: 150px;
+	margin: 0 50px 0 auto;
+}
+
+#wrapper #contenido-sup div nav ul li{
+	border-right: 2px solid white;
+	display: block;
+	vertical-align: top;
+	text-align: left;
+	width: 150px;
+	height: 35px;
+	margin: 0 0 48px 0;
+}
+
+#wrapper #contenido-sup div nav ul li a{
+	color: white;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 0 0 20px;
+	text-decoration: none;
+}
+
+#wrapper #contenido-sup-derecha{
+	height: 470px;
+	width: 710px;
+}

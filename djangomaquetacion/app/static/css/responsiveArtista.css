@@ -1,0 +1,25 @@
+@media screen and (max-width: 360px){
+	header #nav_cabecera{
+		padding: 0.5em 0.5em 0 0;
+	}
+
+	#menu{
+		position: relative;
+	 	padding: 2em 0 4em 0;
+		margin: 0 0 1em 0; 
+	}
+	#menu #logo{
+		position: absolute;
+		top: 30px;
+		margin: 0.5em 3em 0 3em;
+	}
+
+	#menu #nav_menu{
+		margin: 0 0 0 13em;
+	}
+}
+@media screen and (max-width: 1020px){
+	#wrapper{	
+		width: 100%;
+	}
+}

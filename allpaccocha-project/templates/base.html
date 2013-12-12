@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+	{% block css %}
+	{% endblock %}
+	{% block js %}
+	{% endblock %}
+</head>
+<body>
+	<div id="wrapper">
+		<div id="contenido-sup">
+			<figure>
+				<img src="{{ STATIC_URL }}imgs/logo.png" alt="">
+			</figure>
+			<div>
+				<nav>
+					<ul>
+						{% if id_lang == 1 %}
+							{% for menu_list in menuEn %}
+								<li><a href="{{ menu_list.url }}">{{ menu_list.name }}</a></li>
+							{% endfor %}
+						{% else %}
+							{% for menu_list in menuEs %}
+								<li><a href="{{ menu_list.url }}">{{ menu_list.name }}</a></li>
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</nav>	
+			</div>
+		</div>
+		<div id="contenido-sup-derecha">
+			{% block contenido_sup_derecha %}
+			{% endblock %}			
+		</div>
+		<section id="contenido-inf">
+			{% block contenido_inf %}
+			{% endblock %}
+		</section>
+		<footer>
+			<div id="pie">
+				<figure>
+					<a href="{{ nameBlo }}"><img src="{{ STATIC_URL }}imgs/bing.png" alt=""></a>
+				</figure>
+				<figure>
+					<a href="{{ nameFace }}"><img src="{{ STATIC_URL }}imgs/facebook.png" alt=""></a>
+				</figure>
+				<figure>
+					<a href="{{ nameTwi }}"><img src="{{ STATIC_URL }}imgs/twitter.png" alt=""></a>
+				</figure>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

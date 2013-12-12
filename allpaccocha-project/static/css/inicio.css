@@ -1,0 +1,113 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-size: 16px;
+}
+
+#wrapper{
+	background-image: url("../imgs/background_1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+	width: 1024px;
+	min-height: 723px;
+}
+
+#wrapper footer{
+	position: relative;
+}
+
+#wrapper footer #pie{
+	position: absolute;
+	right: 40px;
+	top: -40px;
+}
+
+#wrapper footer #pie figure{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#wrapper #contenido-inf{
+	text-align: center;
+	padding: 50px 0 0 0;
+}
+
+#wrapper #contenido-inf div{
+	display: inline-block;
+	height: 125px;
+	text-align: center;
+	margin: 0 -4px 0 0;
+	padding: 25px 0 0 0;
+	vertical-align: top;
+	width: 270px;
+}
+
+#wrapper #contenido-inf #contenido-inf-medio{
+	border-right: 2px solid #c9c7c7;
+	border-left: 2px solid #c9c7c7;
+}
+
+#wrapper #contenido-inf div article{
+	background: #080404;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #080404;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 120px;
+	width: 190px;
+}
+
+#wrapper #contenido-inf div article figure{
+	position: absolute;
+	top: -70px;
+	right: 0;
+}
+
+#wrapper #contenido-inf div article span{
+	color: white;
+	display: block;
+	text-align: left;
+	padding: 0 0 0 10px;
+}
+
+#wrapper #contenido-sup{
+	margin: 0 auto;
+	height: 470px;
+	position: relative;
+	width: 330px;
+}
+
+#wrapper #contenido-sup figure{
+	position: absolute;
+	top: 30%;
+	left: 30px;
+}
+
+#wrapper #contenido-sup div{
+	position: absolute;
+	bottom: 50px;
+	left: 0px;
+}
+
+#wrapper #contenido-sup div nav ul{
+	list-style-type: none;
+	text-align: center;
+	width: 300px;
+}
+
+#wrapper #contenido-sup div nav ul li{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#wrapper #contenido-sup div nav ul li a{
+	color: white;
+	display: block;
+	text-decoration: none;
+	width: 145px;
+}

@@ -1,0 +1,64 @@
+
+#wrapper #contenido-inf div{
+	display: inline-block;
+	height: 125px;
+	text-align: center;
+	margin: 0 -4px 0 0;
+	padding: 25px 0 0 0;
+	vertical-align: top;
+	width: 270px;
+}
+
+#wrapper #contenido-inf #contenido-inf-medio{
+	border-right: 2px solid #c9c7c7;
+	border-left: 2px solid #c9c7c7;
+}
+
+#wrapper #contenido-inf div article{
+	background: #080404;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #080404;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 120px;
+	width: 190px;
+}
+
+#wrapper #contenido-inf div article figure{
+	position: absolute;
+	top: -70px;
+	right: 0;
+}
+
+#wrapper #contenido-inf div article span{
+	color: white;
+	display: block;
+	text-align: left;
+	padding: 0 0 0 10px;
+}
+
+#wrapper #contenido-sup-derecha #nosotros{
+	background-image: url("../imgs/img_04_nosotros.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: white;
+	height: 310px;
+	margin: 100px 0 0 auto;
+	padding: 30px 0 0 0px;
+	width: 575px;
+}
+
+#wrapper #contenido-sup-derecha #nosotros h2{
+	font-weight: normal;
+	padding: 0 0 0 20px;
+	height: 50px;
+}
+
+#wrapper #contenido-sup-derecha #nosotros p{
+	font-family: "Century Gothic";
+	font-size: 25px;
+	text-align: justify;
+	margin: 0 0 0 20px;
+	width: 530px;
+}

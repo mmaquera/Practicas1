@@ -1,0 +1,86 @@
+
+#wrapper footer #pie{
+	right: 40px;
+	top: 10px;
+}
+
+#wrapper footer #pie figure{
+	margin: 0 4px 0 0;
+}
+
+#wrapper #contenido-sup-derecha #contacto{
+	background-size: 100%;
+	color: white;
+	height: 400px;
+	margin: 100px 0 0 auto;
+	padding: 20px 0 0 0;
+	width: 575px;
+}
+
+#wrapper #contenido-sup-derecha #contacto form p{
+	display:  inline-block;
+	vertical-align: top;
+	margin: 0 20px 0 0;
+	padding: 10px 0 0 0;
+}
+
+#wrapper #contenido-sup-derecha #contacto form p input{
+	border: none;
+	height: 22px;
+	border-radius: 5px;
+	width: 230px;
+}
+
+#wrapper #contenido-sup-derecha #contacto form p label{
+	display: block;
+}
+
+#wrapper #contenido-sup-derecha #contacto form p textarea{
+	border-radius: 5px;
+	width: 500px;
+}
+
+#wrapper #contenido-sup-derecha #contacto form #botton{
+	text-align: right;
+	padding: 30px 0 0 0;
+	width: 400px;
+}
+
+#wrapper #contenido-sup-derecha #contacto form #botton button{
+	border-top-right-radius: 11px;	
+}
+
+
+#wrapper #contenido-inf #contacto-inf{
+	background: #050203;
+	box-shadow: 0 0 10px #080404;
+	height: 60px;
+	text-align: center;
+	margin: 0 0 0 80px;
+	padding: 20px 0 20px 0;
+	vertical-align: top;
+	width: 430px;
+}
+
+#wrapper #contenido-inf #contacto-inf #img-contactenos, #wrapper #contenido-inf #contacto-inf #text-contactenos{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#wrapper #contenido-inf #contacto-inf #img-contactenos{
+	margin: 0 5px 0 0;
+	width: 20px;
+}
+
+#wrapper #contenido-inf #contacto-inf #text-contactenos{
+	color: white;
+	text-align: left;
+	width: 350px;
+	height: 55px;
+}
+
+#wrapper #contenido-inf #contacto-inf #text-contactenos p label{
+	display: inline-block;
+	width: 80px;
+}
+

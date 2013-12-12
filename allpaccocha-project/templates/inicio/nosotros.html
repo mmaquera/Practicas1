@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Nosotros-allpaccoch{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/nosotros.css">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block contenido_sup_derecha %}
+<div id="nosotros">
+	{% if id_lang == 1 %}
+		<h2>{{ nosotros.Title }}</h2>
+		<p>{{ nosotros.Description }}</p>
+	{% else %}
+		<h2>{{ nosotros.Titulo }}</h2>
+		<p>{{ nosotros.Descripcion }}</p>
+	{% endif %}
+</div>
+{% endblock %}	
+{% block contenido_inf %}
+<div>
+	<article>
+		<figure>
+			<img src="{{ STATIC_URL }}imgs/img_01.png" alt="">
+		</figure>
+		<span>Leer mas</span>
+	</article>	
+</div>
+<div id="contenido-inf-medio">
+	<article>
+		<figure>
+			<img src="{{ STATIC_URL }}imgs/img_02.png" alt="">
+		</figure>
+		<span>Leer mas</span>
+	</article>
+</div>
+<div>
+	<article>
+		<figure>
+			<img src="{{ STATIC_URL }}imgs/img_03.png" alt="">
+		</figure>
+		<span>Leer mas</span>
+	</article>	
+</div>
+{% endblock %}

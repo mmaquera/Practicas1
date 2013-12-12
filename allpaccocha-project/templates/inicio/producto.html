@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block title %}Nosotros-allpaccoch{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/producto.css">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block contenido_sup_derecha %}
+<div id="producto">
+	{% if id_lang == 1 %}
+	<section>
+		<article>
+			<figure id="producto-image">
+				<img src="{{ MEDIA_URL }}{{ producto_unit.ImagePortal }}" alt="">
+				<figcaption>
+					{{ producto_unit.Name }}
+				</figcaption>
+			</figure>
+		</article>
+		<article id="line">
+			<figure >
+				<img src="{{ STATIC_URL }}imgs/img.png" alt="">
+			</figure>
+		</article>
+		<article>
+			<p>{{ producto_unit.Description|safe }}</p>
+		</article>
+	</section>
+	{% else %}
+	<section>
+		<article>
+			<figure id="producto-image">
+				<img src="{{ MEDIA_URL }}{{ producto_unit.ImagenPortal }}" alt="">
+				<figcaption>
+					{{ producto_unit.Nombre }}
+				</figcaption>
+			</figure>
+		</article>
+		<article id="line">
+			<figure >
+				<img src="{{ STATIC_URL }}imgs/img.png" alt="">
+			</figure>
+		</article>
+		<article>
+			<p>{{ producto_unit.Descripcion|safe }}</p>
+		</article>
+	</section>
+	{% endif %}
+</div>
+{% endblock %}	
+{% block contenido_inf %}
+<div id="left">
+	<figure>
+		<a href="{% url "producto_views" id_lang producto_unit.pk id_max 1 %}"><img src="{{ STATIC_URL }}imgs/left.png" alt=""></a>
+	</figure>
+</div>
+{% if id_lang == 1 %}
+	{% for producto_list in producto %}
+		{% if forloop.counter == 1 %}
+		<div>
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImageMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Name }}</a></span>
+			</article>	
+		</div>
+		{% endif %}
+		{% if forloop.counter == 2 %}
+		<div id="contenido-inf-medio">
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImageMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Name }}</a></span>
+			</article>
+		</div>
+		{% endif %}
+		{% if forloop.counter == 3 %}
+		<div>
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImageMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Name }}</a></span>
+			</article>	
+		</div>
+		{% endif %}
+	{% endfor %}
+{% else %}
+	{% for producto_list in producto %}
+		{% if forloop.counter == 1 %}
+		<div>
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImagenMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Nombre }}</a></span>
+			</article>	
+		</div>
+		{% endif %}
+		{% if forloop.counter == 2 %}
+		<div id="contenido-inf-medio">
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImagenMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Nombre }}</a></span>
+			</article>
+		</div>
+		{% endif %}
+		{% if forloop.counter == 3 %}
+		<div>
+			<article>
+				<figure>
+					<img src="{{ MEDIA_URL }}{{ producto_list.ImagenMenu }}" alt="">
+				</figure>
+				<span><a {% if producto_unit.pk == producto_list.pk %} style="text-decoration: underline; color: #e4ede9;" {% endif %} href="{% url "producto_views" id_lang producto_list.pk id_max 3 %}">{{ producto_list.Nombre }}</a></span>
+			</article>	
+		</div>
+		{% endif %}
+	{% endfor %}
+{% endif %}
+<div id="rigth">
+	<figure>
+		<a href="{% url "producto_views" id_lang producto_unit.pk id_max 2 %}"><img src="{{ STATIC_URL }}imgs/rigth.png" alt=""></a>
+	</figure>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Nosotros-allpaccoch{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/contacto.css">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block contenido_sup_derecha %}
+<div id="contacto">
+	<form action="">
+		{% csrf_token %}
+		{{ form.as_p }}	
+		{% if id_lang == 1 %}
+		<p id="botton">
+			<button>SEND</button>	
+		</p>
+		{% else %}
+		<p id="botton">
+			<button>ENVIAR</button>	
+		</p>
+		{% endif %}
+	</form>
+</div>
+{% endblock %}	
+{% block contenido_inf %}
+<div id="contacto-inf">
+	<div id="img-contactenos">
+		<figure>
+			<img src="{{ STATIC_URL }}imgs/photo_1.png" alt="">
+		</figure>
+		<figure>
+			<img src="{{ STATIC_URL }}imgs/photo_2.png" alt="">
+		</figure>
+	</div>
+	<div id="text-contactenos">
+		{% if id_lang == 1 %}
+			{% for contacto_list in contacto %}
+				<p><label for="">{{ contacto_list.Title }}:</label>{{ contacto_list.Description }}</p>
+			{% endfor %}
+		{% else %}
+			{% for contacto_list in contacto %}
+				<p><label for="">{{ contacto_list.Titulo }}:</label>{{ contacto_list.Descripcion }}</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

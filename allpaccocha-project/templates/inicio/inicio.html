@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Allpaccocha</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/inicio.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="contenido-sup">
+			<figure>
+				<img src="{{ STATIC_URL }}imgs/logo.png" alt="">
+			</figure>
+			<div>
+				<nav>
+					<ul>
+						<li><a href="{% url "nosotros_views" 1 %}">ENGLISH</a></li>
+						<li><a href="{% url "nosotros_views" 2 %}">ESPAÑOL</a></li>
+					</ul>
+				</nav>	
+			</div>
+		</div>
+		<section id="contenido-inf">
+			<div>
+				<article>
+					<figure>
+						<img src="{{ STATIC_URL }}imgs/img_01.png" alt="">
+					</figure>
+					<span>Leer mas</span>
+				</article>	
+			</div>
+			<div id="contenido-inf-medio">
+				<article>
+					<figure>
+						<img src="{{ STATIC_URL }}imgs/img_02.png" alt="">
+					</figure>
+					<span>Leer mas</span>
+				</article>
+			</div>
+			<div>
+				<article>
+					<figure>
+						<img src="{{ STATIC_URL }}imgs/img_03.png" alt="">
+					</figure>
+					<span>Leer mas</span>
+				</article>	
+			</div>
+		</section>
+		<footer>
+			<div id="pie">
+				<figure>
+					<a href="{{ nameBlo }}"><img src="{{ STATIC_URL }}imgs/bing.png" alt=""></a>
+				</figure>
+				<figure>
+					<a href="{{ nameFace }}"><img src="{{ STATIC_URL }}imgs/facebook.png" alt=""></a>
+				</figure>
+				<figure>
+					<a href="{{ nameTwi }}"><img src="{{ STATIC_URL }}imgs/twitter.png" alt=""></a>
+				</figure>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

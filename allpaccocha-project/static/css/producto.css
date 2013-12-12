@@ -1,0 +1,89 @@
+#wrapper #contenido-inf #left{
+	height: 50px;
+	padding: 0;
+	width: 50px;
+}
+
+#wrapper #contenido-inf #rigth{
+	height: 50px;
+	padding: 0;
+	width: 50px;
+}
+
+#wrapper #contenido-inf div{
+	display: inline-block;
+	height: 125px;
+	text-align: center;
+	padding: 25px 0 0 0;
+	margin: 0 -4px 0 0;
+	vertical-align: top;
+	width: 270px;
+}
+
+#wrapper #contenido-inf #contenido-inf-medio{
+	border-right: 2px solid #c9c7c7;
+	border-left: 2px solid #c9c7c7;
+}
+
+#wrapper #contenido-inf div article{
+	background: #080404;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #080404;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 120px;
+	width: 190px;
+}
+
+#wrapper #contenido-inf div article figure{
+	position: absolute;
+	top: -70px;
+	right: 0;
+}
+
+#wrapper #contenido-inf div article span{
+	color: white;
+	display: block;
+	text-align: left;
+	padding: 0 0 0 10px;
+}
+
+#wrapper #contenido-inf div article span a{
+	text-decoration: none;
+	color: #525252;
+}
+
+#wrapper #contenido-inf div article span a:hover{
+	text-decoration: underline;
+}
+
+#wrapper #contenido-sup-derecha #producto{
+	color: white;
+	height: 310px;
+	margin: 100px 0 0 auto;
+	width: 575px;
+}
+
+#wrapper #contenido-sup-derecha #producto section article{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 -20px 0 0;
+}
+
+#wrapper #contenido-sup-derecha #producto section article #producto-image img{
+	width: 248px;
+	height: 305px;
+}
+
+#wrapper #contenido-sup-derecha #producto section #line{
+	padding: 30px 0 0 0;
+}
+
+#wrapper #contenido-sup-derecha #producto section article p{
+	color: #856163;
+	padding: 80px 0 0 20px;
+	text-align: justify;
+	text-decoration: underline;
+	width: 160px;
+}
